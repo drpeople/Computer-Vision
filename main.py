@@ -7,7 +7,6 @@ import multiprocessing
 
 def main():
     # Function to visualize bounding boxes on an image
-    import os
     def visualize_bounding_boxes(image_path, annotation_path, class_labels):
         image = cv2.imread(image_path)
         try:
@@ -91,7 +90,7 @@ def main():
 
     # Train the model using the 'yolov8n.pt' dataset for 300 epochs
     results = model.train(data=r'C:\Users\goker\PycharmProjects\pythonProject1\data.yaml', epochs=300, imgsz=640,batch=-1)
-    #results = model.train(data=r'C:\Users\goker\PycharmProjects\pythonProject1\data.yaml', epochs=1, imgsz=640,batch=-1)
+
 
     import matplotlib.image as mpimg
     img = mpimg.imread(r'C:\Users\goker\PycharmProjects\pythonProject1\runs\detect\train16\F1_curve.png')
